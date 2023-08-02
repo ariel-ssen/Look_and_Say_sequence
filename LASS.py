@@ -27,7 +27,8 @@ def solution(ant):
     answer = ''
     if leng % 2 == 0:
         answer = ''.join(ant[leng // 2 - 1:leng // 2 + 1])#인덱싱 슬라이스
-    else:
+    else: 
+        ## 2로 나누어 떨어지지 않은 개미수열
         answer = ''.join(ant[leng // 2:leng // 2 + 1])
     return answer
 
