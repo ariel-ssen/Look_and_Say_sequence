@@ -17,3 +17,9 @@
 - 인덱싱 슬라이싱을 이용하여 출력 했다. 
 
 ## testcode 
+1. LASS.py -> 개미수열을 구하는 코드 + unittest 
+: testcode를 파일 하나에 작성
+2. ant_sequence_module.py -> 개미수열을 구하는 코드 
+2. test_ant_sequence.py -> unittest : testcode 
+: 파일을 나누어서 만듬
+
