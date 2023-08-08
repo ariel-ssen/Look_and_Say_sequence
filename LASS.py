@@ -1,3 +1,21 @@
+import unittest
+
+class TestAntSequence(unittest.TestCase):
+    def test_ant_sequence(self):
+        self.assertEqual(ant_sequence(1), "1")
+        self.assertEqual(ant_sequence(3), "21")
+        self.assertEqual(ant_sequence(9), "31131211131221")
+        self.assertEqual(ant_sequence(15), "311311222113111231131112132112311321322112111312211312111322212311322113212221")
+        
+
+    def test_solution(self):
+        self.assertEqual(solution("1"), "1")
+        self.assertEqual(solution("21"), "21")
+        self.assertEqual(solution("31131211131221"), "11")
+        self.assertEqual(solution("311311222113111231131112132112311321322112111312211312111322212311322113212221"), "21")
+       
+
+    
 def ant_sequence(num):
     ant = [1] #첫번째 개미 수열
 
@@ -21,7 +39,6 @@ def ant_sequence(num):
 
     return ''.join(map(str, ant))
 
-
 def solution(ant):
     ant, leng = list(ant), len(ant)
     answer = ''
@@ -32,9 +49,12 @@ def solution(ant):
         answer = ''.join(ant[leng // 2:leng // 2 + 1])
     return answer
 
-
-
 num = int(input("몇 번째 개미 수열을 구할까요?"))
 ant_sequence_result = ant_sequence(num)
 print(ant_sequence_result)
 print(solution(ant_sequence_result))
+    
+    
+    
+if __name__ == '__main__':
+    unittest.main()
